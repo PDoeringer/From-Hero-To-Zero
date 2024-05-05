@@ -27,8 +27,8 @@ public class UserList
 
     public UserList() throws IOException
     {
-    	users = getObject("C:\\Users\\Admin\\git\\shortcasts-dev\\Artikelverwaltung\\src\\main\\java\\userList.txt");
-    	admins = getObject("C:\\Users\\Admin\\git\\shortcasts-dev\\Artikelverwaltung\\src\\main\\java\\userListAdmin.txt");
+    	users = getObject("userList.txt");
+    	admins = getObject("userListAdmin.txt");
     }
     
     
