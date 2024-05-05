@@ -8,8 +8,6 @@ import jakarta.inject.Named;
 
 
 
-//CO2 emissions (kt),EN.ATM.CO2E.KT,Sweden,SWE,53346.2,53277.5,40388.1,38993,39120.1,38691.2,38168.2,35915.9,34964.6,33576.1,..,..
-
 public class Country
 {
 	
