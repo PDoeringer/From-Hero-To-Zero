@@ -22,7 +22,6 @@ import jakarta.inject.Named;
 import jakarta.servlet.http.HttpServletRequest;
 
 
-//CO2 emissions (kt),EN.ATM.CO2E.KT,Sweden,SWE,53346.2,53277.5,40388.1,38993,39120.1,38691.2,38168.2,35915.9,34964.6,33576.1,..,..
 
 @Named
 @RequestScoped
@@ -39,7 +38,7 @@ public class List_Country_Science{
 	private List<Country> countrys = new ArrayList<Country>();
 	private String searched_emission = "Gib oben dein Land oder die Abkürzung ein. Der Wert jeweils ganz rechts in der Zeile ist der aktuellste:";
 	
-	private String path = "C:\\Users\\Admin\\git\\shortcasts-dev\\Artikelverwaltung\\src\\main\\java\\data_science.txt";
+	private String path = "data_science.txt";
 	
 
     public List_Country_Science() throws IOException
