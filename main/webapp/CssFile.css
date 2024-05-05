@@ -1,0 +1,136 @@
+@charset "ISO-8859-1";
+
+html{
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+/* == Navigationsleiste == */
+.nav_Leiste {
+    width: 100%;
+    height: 50px;
+    background-color: darkgray;
+}
+
+.nav_Leiste > ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 2rem;
+}
+
+.nav_Leiste > ul > li{
+    display: inline-block;
+    height: 100%;
+    padding: 0 .2rem 0 .4rem;
+}
+
+.nav_Leiste > ul > li > a {
+    margin-top: .75rem;
+    display: inline-block;
+}
+
+.nav_Leiste > ul > li > a:link{
+    color: black;
+    text-decoration: none;
+}
+
+.nav_Leiste > ul > li > a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.nav_Leiste > ul > li > a:active{
+    color: black;
+    text-decoration: none;
+}
+
+.nav_Leiste > ul > li > a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+.back_right {
+	left: 2rem;
+}
+
+
+
+
+
+
+
+
+/* == Search Bar == */
+.inputbox{
+	margin: 1rem;
+	text-align: center;
+}
+
+
+
+
+
+
+/* == Country Tabelle == */
+
+.center_box{
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+.countryTable {   
+   border-collapse:collapse;
+   border:1px solid #000000;
+}
+
+.countryTableHeader {
+   text-align:center;
+   background:none repeat scroll 0 0 #B5B5B5;
+   border-bottom:1px solid #000000;  
+   padding:2px;
+}
+
+.countryTableOddRow {
+   text-align:center;
+   background:none repeat scroll 0 0 #FFFFFF;	
+}
+
+.countryTableEvenRow {
+   text-align:center;
+   background:none repeat scroll 0 0 #D3D3D3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

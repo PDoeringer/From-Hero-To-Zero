@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f = "http://java.sun.com/jsf/core">
+      
+<h:head>
+  <title>Like Hero To Zero</title>
+  <link rel="stylesheet" type="text/css" href="CssFile.css"></link>
+</h:head>
+<h:body>
+
+
+	<!-- Navigation -->
+	<nav class="nav_Leiste">
+		<ul>
+            <li><a href="Login.xhtml">Login</a></li>
+        </ul>
+    </nav>
+   
+   
+	<!-- Search Bar -->
+	<div class="inputbox">
+		<h1>Like Hero to Zero</h1>
+		<p>Diese App hat zum Ziel, die CO2 Emissionen einzelner Länder transparent zu machen.</p>
+		<h:form id="countryform">
+			<h:inputText id="inputcountry" />
+			<h:commandButton value="OK" action="#{list_Country.get_emission_by_country()}" /> 
+		</h:form>
+		<p><h:outputText value="#{list_Country.getSearched_emission()}"></h:outputText></p>
+	</div>
+		
+	    
+	    
+	<!-- Tabelle -->
+	<div class="center_box">
+		<h:dataTable var="einCountry" value="#{list_Country.countrys}"
+		styleClass = "countryTable"
+	    headerClass = "countryTableHeader"
+	    rowClasses = "countryTableOddRow,countryTableEvenRow">
+		>
+			<h:column>
+				<f:facet name = "header">Land</f:facet>
+				<h:outputText value="#{einCountry.name}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name = "header">Land Abkürzung</f:facet>
+				<h:outputText value="#{einCountry.name_short}"></h:outputText>
+			</h:column>
+			<h:column>
+			<f:facet name = "header">Jährliche CO2 Emissionen in kt</f:facet>
+			<h:outputText value="#{einCountry.data_string}"></h:outputText>
+			</h:column>
+		</h:dataTable>
+	</div>
+	
+
+
+</h:body>
+</html>
+

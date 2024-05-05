@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f = "http://java.sun.com/jsf/core">
+<h:head>
+  <title>Like Hero To Zero</title>
+  <link rel="stylesheet" type="text/css" href="CssFile.css"></link>
+</h:head>
+<h:body>
+
+
+<!-- Navigation -->
+	<nav class="nav_Leiste">
+		<ul class="back_right">
+            <li><a href="index.xhtml">Back</a></li>
+        </ul>
+		<ul>
+            <li><a href="Login.xhtml">Login</a></li>
+        </ul>
+    </nav>
+    
+    
+    <!-- Update Bar -->
+	<div class="inputbox">
+		<h:form>
+			<h:commandButton value="Update List" action="#{list_Country_Science.copyFile()}" /> 
+			<h:commandButton value="Refresh" /> 
+		</h:form>
+	</div>
+    
+    
+    
+    <!-- Tabellen -->
+	<div class="center_box">
+	<div>
+		<h3>Neue Daten</h3>
+		<h:dataTable var="einCountry" value="#{list_Country_Science.countrys}"
+		styleClass = "countryTable"
+	    headerClass = "countryTableHeader"
+	    rowClasses = "countryTableOddRow,countryTableEvenRow">
+		>
+			<h:column>
+				<f:facet name = "header">Land</f:facet>
+				<h:outputText value="#{einCountry.name}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name = "header">Land Abkürzung</f:facet>
+				<h:outputText value="#{einCountry.name_short}"></h:outputText>
+			</h:column>
+			<h:column>
+			<f:facet name = "header">Jährliche CO2 Emissionen in kt</f:facet>
+			<h:outputText value="#{einCountry.data_string}"></h:outputText>
+			</h:column>
+		</h:dataTable>
+	</div>
+		
+	<div>
+		<h3>Alte Daten</h3>
+		<h:dataTable var="einCountry" value="#{list_Country.countrys}"
+		styleClass = "countryTable"
+	    headerClass = "countryTableHeader"
+	    rowClasses = "countryTableOddRow,countryTableEvenRow">
+		>
+			<h:column>
+				<f:facet name = "header">Land</f:facet>
+				<h:outputText value="#{einCountry.name}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name = "header">Land Abkürzung</f:facet>
+				<h:outputText value="#{einCountry.name_short}"></h:outputText>
+			</h:column>
+			<h:column>
+			<f:facet name = "header">Jährliche CO2 Emissionen in kt</f:facet>
+			<h:outputText value="#{einCountry.data_string}"></h:outputText>
+			</h:column>
+		</h:dataTable>
+	</div>
+	</div>
+	
+ 
+</h:body>
+</html>
